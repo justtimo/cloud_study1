@@ -1,0 +1,12 @@
+server:
+  port: 7001
+
+eureka:
+  instance:
+    hostname: localhost
+
+  client:
+    register-with-eureka: false #我们自己是注册中心，不需要注册自己。集群需要true
+    fetchRegistry: false #我们自己是注册中心，不需要获取服务注册信息。集群需要true
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
