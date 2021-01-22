@@ -30,7 +30,9 @@ public class PaymentServiceImpl implements PaymentService {
                     value="5000")
     })
     public String payment_Timeout(Integer id){
-        int timeNumber = 13;
+        //int timeNumber = 3; //小于等于3秒算是正常情况
+        int timeNumber = 13;//模拟非正常情况
+        //int i = 1/0 ; //模拟非正常情况
         try {
             TimeUnit.SECONDS.sleep(timeNumber);
         } catch (Exception e) {
