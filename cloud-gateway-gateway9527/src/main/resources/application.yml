@@ -11,12 +11,24 @@ spring:
           uri: lb://CLOUD-PROVIDER-PAYMENT8001  #使用getway进行微服务负载均衡
           predicates:
             - Path=/payment/getId/**   #断言,路径相匹配的进行路由
+            #- After=2031-01-26T02:40:43.616+08:00[Asia/Shanghai]
+            #- Before=2021-01-26T02:40:43.616+08:00[Asia/Shanghai]
+            #- Between=2021-03-08T10:59:34.102+08:00[Asia/Shanghai],2021-03-08T10:59:34.102+08:00[Asia/Shanghai]
+            #- Cookie=username,wby    #并且Cookie是username=zhangshuai才能访问
+            #- Header=X-Request-Id, \d+   #请求头中要有X-Request-Id属性并且值为整数的正则表达式
+            #- Host=**.wby.com #请求主机地址必须为**.wby.com
+            #- Method=GET,POST #请求方式必须是GET
+            #- Path=/red/{segment},/blue/{segment} #断言方式为：请求路径
+            #- Query=username, \d+ #要有参数名称并且是正整数才能路由
+            #- RemoteAddr=192.168.1.1/24 #远程地址：IP为192.168.1.1子网掩码为24
+            #- Weight=group1, 2 #权重按组计算
 
         - id: payment_routh2
           #uri: http://localhost:8001
           uri: lb://CLOUD-PROVIDER-PAYMENT8001
           predicates:
             - Path=/payment/lb/**   #断言,路径相匹配的进行路由
+
 
 
 eureka:
