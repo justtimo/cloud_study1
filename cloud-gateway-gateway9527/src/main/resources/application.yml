@@ -14,7 +14,7 @@ spring:
             #- After=2031-01-26T02:40:43.616+08:00[Asia/Shanghai]
             #- Before=2021-01-26T02:40:43.616+08:00[Asia/Shanghai]
             #- Between=2021-03-08T10:59:34.102+08:00[Asia/Shanghai],2021-03-08T10:59:34.102+08:00[Asia/Shanghai]
-            #- Cookie=username,wby    #并且Cookie是username=zhangshuai才能访问
+            - Cookie=username,wby    #并且Cookie是username=zhangshuai才能访问
             #- Header=X-Request-Id, \d+   #请求头中要有X-Request-Id属性并且值为整数的正则表达式
             #- Host=**.wby.com #请求主机地址必须为**.wby.com
             #- Method=GET,POST #请求方式必须是GET
