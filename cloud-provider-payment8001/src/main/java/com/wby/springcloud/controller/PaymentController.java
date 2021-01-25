@@ -73,7 +73,7 @@ public class PaymentController {
     @GetMapping(value = "/payment/getId/{id}")
     public String get(@PathVariable("id") Long id) {
         log.debug("===========");
-        return "8001微服务，由9527代理";
+        return "8001微服务，由9527代理：port：="+port;
     }
 
 }
