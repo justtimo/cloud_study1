@@ -76,5 +76,11 @@ public class PaymentController {
         return "8001微服务，由9527代理：port：="+port;
     }
 
+    @GetMapping("/payment/zipkin")
+    public String paymentZipkin(){
+        return "hi ,i'am paymentzipkin server，welcome ，O(∩_∩)O哈哈~";
+    }
+
+
 }
 

@@ -10,28 +10,20 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.wby.springcloud</groupId>
-    <artifactId>cloud-consumer-order9001</artifactId>
+    <artifactId>cloudalibaba-consumer-nacos-order8111</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
-        <!--包含了sleuth+zipkin-->
+        <!--SpringCloud ailibaba nacos -->
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-zipkin</artifactId>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
-
-
         <dependency>
             <groupId>com.wby.springcloud</groupId>
             <artifactId>cloud-api-commons</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -57,4 +49,5 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
 </project>

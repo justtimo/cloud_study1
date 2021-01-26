@@ -1,0 +1,13 @@
+server:
+  port: 8111
+
+spring:
+  application:
+    name: nacos-order-consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+#消费者将要去访问的微服务名称(注册成功进nacos的微服务提供者【可选】，注意：nacos-payment-provider含有IP和端口)
+service-url:  #自定义了一个配置，方便controller获取
+  nacos-user-service: http://nacos-payment-provider
