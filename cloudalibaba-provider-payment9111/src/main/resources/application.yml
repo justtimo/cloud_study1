@@ -8,6 +8,7 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848 #配置Nacos地址
+        #server-addr: 47.65.126.165:1111 #配置Nacos集群地址。nginx监听1111端口配置了3个nacos的负载均衡
 
 management:
   endpoints:

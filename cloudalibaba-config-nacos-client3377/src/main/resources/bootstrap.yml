@@ -11,8 +11,10 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848 #服务注册中心地址
+        #server-addr: 47.65.126.165:1111 #配置Nacos集群地址。nginx监听1111端口配置了3个nacos的负载均衡
       config:
         server-addr: localhost:8848 #配置中心地址
+        #server-addr: 47.65.126.165:1111 #配置Nacos集群地址。nginx监听1111端口配置了3个nacos的负载均衡
         file-extension: yaml #指定yaml格式的配置（yml和yaml都可以）
         namespace: cd9b67c1-69e1-41e9-8a9c-49b8384c9411
         group: DEV1_GROUP
